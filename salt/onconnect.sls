@@ -1,3 +1,4 @@
-local.state.apply:
-  - tgt: {{ data['id'] }}
+/tmp/hello.txt:
+  file.managed:
+    - source: salt://hello.txt
 
