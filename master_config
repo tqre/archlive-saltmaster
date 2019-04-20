@@ -1,5 +1,3 @@
-interface: 127.0.0.1
-
 reactor:
   - 'salt/minion/*/start':
     - /srv/salt/onconnect.sls
