@@ -1,10 +1,9 @@
 #!/bin/bash
 
 echo Master initialization script starting...
-cp -v /tmp/master/master_config /etc/salt/master
 cp -vr /tmp/master/salt /srv
 
-cat >> /etc/salt/master << EOF
+cat > /etc/salt/master << EOF
 interface: $(hostname -i)
 EOF
 
