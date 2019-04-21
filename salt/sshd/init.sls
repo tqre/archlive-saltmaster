@@ -13,6 +13,6 @@ openssh:
 sshd:
   service.running:
     - watch:
-      - file: /etc/ssh/ssh_config
+      - file: /etc/ssh/sshd_config
       - file: /root/.ssh/authorized_keys
 
