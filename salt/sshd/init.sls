@@ -3,7 +3,7 @@ openssh:
 
 /etc/ssh/sshd_config:
   file.managed:
-    - source: salt://sshd_config
+    - source: salt://sshd/sshd_config
 
 /root/.ssh/authorized_keys:
   file.managed:
