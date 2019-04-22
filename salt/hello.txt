@@ -1,1 +1,1 @@
-Hello wrld
+This is a file managed by salt-master and generated upon salt-minion connecting.
