@@ -10,3 +10,6 @@ ufw:
 firewall:
   service.running:
     - name: ufw
+
+'ufw enable':
+  cmd.run
