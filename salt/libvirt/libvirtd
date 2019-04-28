@@ -1,1 +1,1 @@
-LIBVIRTD_ARGS=""
+LIBVIRTD_ARGS="--listen"

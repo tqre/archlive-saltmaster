@@ -5,3 +5,5 @@ libvirt:
   file.managed:
     - source: salt://libvirt/libvirtd
 
+libvirtd:
+  service.running
