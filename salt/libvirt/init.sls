@@ -5,21 +5,22 @@ libvirt:
   file.managed:
 
 # daemon config file
-    - name: /etc/sysconfig/libvirtd
+    - name: /etc/conf.d/libvirtd
+      - source: salt://libvirt/libvirtd
 
 # Archwiki agrees: https://wiki.archlinux.org/index.php/Libvirt
     - contents: 'LIBVIRTD_ARGS="--listen"'
 
     - require:
       - pkg: libvirt
-  virt.keys:
-    - require:
-      - pkg: libvirt
+#  virt.keys:
+#    - require:
+#      - pkg: libvirt
   service.running:
     - name: libvirtd
     - require:
       - pkg: libvirt
-      - network: br0
+#      - network: br0
       - libvirt: libvirt
     - watch:
       - file: libvirt
