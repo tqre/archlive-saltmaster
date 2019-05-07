@@ -37,7 +37,8 @@
 ## Further testing
 
 - multiple qemu-machines, macaddressing?
-- class dhcp server big enough to accomodate 1000+ machines?
-  - with qemu networking, main server is not even aware of the vms?
+- class network dhcp space big enough to accomodate 1000+ machines?
+- with qemu networking, main server is not even aware of the vms!
+
 
 
