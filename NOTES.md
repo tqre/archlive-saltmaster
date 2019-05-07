@@ -11,17 +11,28 @@
   - ssh localadmin@localhost -p 10022 # works
 - direct ssh from master to a vm?
 
-
 ## Starting salt-minion on qemu-vm (LFS-0.3.3)
 
 - sudo salt-minion -l debug
 - define master IP address
-- qemu defines enp0s2 to 10.0.2.15 by default, change that
-- qemu machines ethernet address definition (Archwiki!)
+- qemu has a dhcp server builtin, started default with net nic
+- qemu machines need separate ethernet address definition (Archwiki!)
   - net nic option gives default link-level address 52:54:00:12:34:56
   - specify mac with: '-net nic,macaddr=52:54:xx:xx:xx:xx'
 - remove masterpki-key from qemu-lfs-minion
 - https://wiki.archlinux.org/index.php/QEMU#Networking
+
+#### Manual mac-changing on a 2nd vm-minion on same minion-hypervisor
+
+- this can be accomplished with qemu on vm startup
+```
+ip link show <interface>
+ip link set dev <interface> down
+ip link set dev <interface> address xx:xx:xx:xx:xx:xx
+ip link set dev <interface> up
+```
+- dev option needed?
+- start up salt-minion on another vm - success
 
 ## qemu-LFS networking
 
@@ -39,6 +50,13 @@
 - multiple qemu-machines, macaddressing?
 - class network dhcp space big enough to accomodate 1000+ machines?
 - with qemu networking, main server is not even aware of the vms!
+- reduce vm memory to 128MB, should be enough
 
+## TODO
+
+- scripts to fire up vm's on minions (done from master?)
+  - individual ssh port forwarding for vm's
+  - individual link-level addressess for vm's (MAC)
+- documentation...
 
 
