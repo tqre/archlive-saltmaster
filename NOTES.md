@@ -19,18 +19,18 @@
 - qemu machines need separate ethernet address definition (Archwiki!)
   - net nic option gives default link-level address 52:54:00:12:34:56
   - specify mac with: '-net nic,macaddr=52:54:xx:xx:xx:xx'
-- remove masterpki-key from qemu-lfs-minion
+- remove master pki-key from qemu-lfs-minion
 - https://wiki.archlinux.org/index.php/QEMU#Networking
 
 #### Manual mac-changing on a 2nd vm-minion on same minion-hypervisor
 
-- this can be accomplished with qemu on vm startup
 ```
 ip link show <interface>
 ip link set dev <interface> down
 ip link set dev <interface> address xx:xx:xx:xx:xx:xx
 ip link set dev <interface> up
 ```
+ this can also be accomplished with qemu on vm startup
 - dev option needed?
 - start up salt-minion on another vm - success
 
@@ -43,14 +43,13 @@ ip link set dev <interface> up
     - https://wiki.archlinux.org/index.php/Internet_sharing
 
 - with ip forwarding enabled on hypervisor, vm can access internet
-  - ping doesn't work, only tcp and udp
+  - ping (icmp) doesn't work, only tcp and udp
 
 ## Further testing
 
-- multiple qemu-machines, macaddressing?
-- class network dhcp space big enough to accomodate 1000+ machines?
-- with qemu networking, main server is not even aware of the vms!
-- reduce vm memory to 128MB, should be enough
+- multiple qemu-machines, macaddressing scripts,
+- with qemu networking, main classroom server doesn't need to serve more IP's with dhcp
+- 128MB of memory is enough to run salt-minion
 
 ## TODO
 
