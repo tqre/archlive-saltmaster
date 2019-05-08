@@ -1,7 +1,7 @@
 # Testing notes on class machines
 
-- qcow images go to root home when executing img_create
-- vm_start does not return anything with salt, machines do start
+- qcow images go to root home when executing img_create in /qemu -directory of salt-archlive-minion
+- vm_start does not return anything when run with salt, machines do start however
 
 ## SSH connection from master -> minion -> virtual machine
 
