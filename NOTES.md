@@ -26,12 +26,11 @@
 
 ```
 ip link show <interface>
-ip link set dev <interface> down
-ip link set dev <interface> address xx:xx:xx:xx:xx:xx
-ip link set dev <interface> up
+ip link set <interface> down
+ip link set <interface> address xx:xx:xx:xx:xx:xx
+ip link set <interface> up
 ```
 - this should also be possible to accomplish with qemu on vm startup, but it fails for some reason
-- dev option needed?
 - start up salt-minion on another vm - success
 
 ## qemu-LFS networking
