@@ -49,7 +49,7 @@ ip link set dev <interface> up
 
 - multiple qemu-machines, macaddressing scripts,
 - with qemu networking, main classroom server doesn't need to serve more IP's with dhcp
-- 128MB of memory is enough to run salt-minion
+- 128MB of memory is barely enough to run salt-minion, have to give some more probably
 
 ## TODO
 
