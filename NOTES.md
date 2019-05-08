@@ -30,7 +30,7 @@ ip link set dev <interface> down
 ip link set dev <interface> address xx:xx:xx:xx:xx:xx
 ip link set dev <interface> up
 ```
- this can also be accomplished with qemu on vm startup
+- this should also be possible to accomplish with qemu on vm startup, but it fails for some reason
 - dev option needed?
 - start up salt-minion on another vm - success
 
