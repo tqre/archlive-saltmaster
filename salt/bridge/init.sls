@@ -6,4 +6,4 @@ include:
   - bridge.dnsmasq
   - bridge.iptab
   - bridge.ipforward
-
+  - bridge.qemuhelper
