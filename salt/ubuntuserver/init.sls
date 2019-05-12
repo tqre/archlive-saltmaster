@@ -2,4 +2,5 @@
 
 include:
   - ubuntuserver.nginx
+  - ubuntuserver.mysql
 
