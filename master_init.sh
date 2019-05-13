@@ -9,6 +9,7 @@ cp /root/.ssh/id_rsa.pub /srv/salt/sshd/id_rsa.pub
 
 cat > /etc/salt/master << EOF
 interface: $(hostname -i)
+worker_threads: 20
 EOF
 
 echo Master IP: $(hostname -i)

@@ -5,7 +5,7 @@ natrule:
   iptables.append:
     - table: nat
     - chain: POSTROUTING
-    - o: enp0s3
+    - o: eno1
     - jump: MASQUERADE
     - save: True
 
@@ -21,7 +21,7 @@ forward-from-bridge:
   iptables.append:
     - chain: FORWARD
     - i: br0
-    - o: enp0s3
+    - o: eno1
     - jump: ACCEPT
     - save: True
 
