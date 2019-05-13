@@ -2,6 +2,6 @@
 
 for i in {0..9}; do
 
-./vm_start COW$i
+/qemu/vm_start /root/vm_start COW$i &
 
 done
