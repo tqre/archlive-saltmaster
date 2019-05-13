@@ -1,4 +1,4 @@
 /etc/qemu/bridge.conf:
-  - file.managed:
+  file.managed:
     - source: salt://bridge/qhelper.conf
     - makedirs: True
