@@ -3,6 +3,6 @@
 
 for i in {0..90}; do
 
-qemu-img create -f qcow2 -o backing_file=/qemu/LFS-0.4.1.qcow2 $1$i.qcow2
+qemu-img create -f qcow2 -o backing_file=/qemu/LFS-0.4.2.qcow2 $1$i.qcow2
 
 done
