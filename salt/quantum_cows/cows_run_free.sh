@@ -1,7 +1,8 @@
 #!/bin/bash
 
-for i in {0..9}; do
+for i in {0..90}; do
 
-/qemu/vm_start /root/vm_start COW$i &
+/qemu/vm_start /root/$1$i &
+sleep 20
 
 done
