@@ -1,0 +1,4 @@
+qemu-system-x86_64 -drive file=$1.qcow2 \
+-nographic -enable-kvm \
+-net nic -net bridge,br=br0 -m 136M \
+-vga none
