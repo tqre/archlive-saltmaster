@@ -9,4 +9,8 @@
   file.managed:
     - source: salt://quantum_cows/cows_run_free.sh
 
+'/qemu/vm_start':
+  file.managed:
+    - source: salt://quantum_cows/vm_start
+
 
