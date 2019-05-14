@@ -1,8 +1,8 @@
 #!/bin/bash
 
-for i in {0..90}; do
+for i in {0..84}; do
 
 /qemu/vm_start /root/$1$i &
-sleep 10
+sleep 5
 
 done
